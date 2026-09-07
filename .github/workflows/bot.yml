@@ -20,7 +20,7 @@ jobs:
           node-version: 20
 
       - name: Abhängigkeiten installieren
-        run: npm ci
+        run: npm install
 
       - name: BatuBot1 starten
         run: npm start
