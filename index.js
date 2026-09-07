@@ -7,7 +7,7 @@ if (!token.startsWith("oauth:")) {
   token = "oauth:" + token;
 }
 
-const  const socket = tls.connect({
+const   socket = tls.connect({
   host: "irc.chat.twitch.tv",
   port: 6697,
   rejectUnauthorized: false
