@@ -14,7 +14,7 @@ const   socket = tls.connect({
 }, () => {
   console.log("🔌 Verbindung zu Twitch hergestellt!");
 
-  socsocket.write("CAP REQ :twitch.tv/membership twitch.tv/tags twitch.tv/commands\r\n");
+socket.write("CAP REQ :twitch.tv/membership twitch.tv/tags twitch.tv/commands\r\n");
 socket.write(`PASS ${token}\r\n`);
 socket.write(`NICK ${username}\r\n`);
 socket.write(`JOIN #batu68t\r\n`);
