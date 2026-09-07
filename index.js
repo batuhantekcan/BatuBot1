@@ -1,6 +1,11 @@
 const tmi = require("tmi.js");
 
 const client = new tmi.Client({
+    connection: {
+    secure: true,
+    reconnect: true,
+    reconnectInterval: 5000
+  },
   options: { debug: true },
   identity: {
     username: process.env.BOT_USERNAME,
