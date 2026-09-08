@@ -46,13 +46,13 @@ socket.on("data", (data) => {
 
     if (message.toLowerCase() === "!socials") {
       socket.write(
-        `PRIVMSG #batu68t :🔥 Batu's Socials | TikTok: @clutchbybatu | Instagram: @batu.t68\r\n`
+        `PRIVMSG #batu68t :🔥 Batu's Socials | TikTok: @batu68t | Instagram: @batu.t68\r\n`
       );
     }
 
     if (message.toLowerCase() === "!tiktok") {
       socket.write(
-        `PRIVMSG #batu68t :🎮 TikTok von Batu: @clutchbybatu 🔥 Folgt gerne für Warzone Clips!\r\n`
+        `PRIVMSG #batu68t :🎮 TikTok von Batu: @batu68t 🔥 Folgt gerne für Warzone Clips!\r\n`
       );
     }
 
