@@ -11,6 +11,26 @@ if (!token.startsWith("oauth:")) {
 }
 
 const accessToken = token.replace("oauth:", "");
+async function validateToken() {
+  const response = await fetch("https://id.twitch.tv/oauth2/validate", {
+    headers: {
+      Authorization: `OAuth ${accessToken}`
+    }
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    console.log("❌ TOKEN UNGÜLTIG");
+    console.log(data);
+    return false;
+  }
+
+  console.log("✅ TOKEN GÜLTIG");
+  console.log("👤 Twitch-Benutzer:", data.login);
+  console.log("🔑 Scopes:", data.scopes.join(", "));
+  return true;
+}
 const channel = "batu68t";
 
 let socket;
@@ -226,5 +246,6 @@ async function startFollowSystem() {
   }
 }
 
+validateToken();
 connectChat();
 startFollowSystem();
