@@ -1,3 +1,4 @@
+const WebSocket = require("ws");
 const tls = require("tls");
 const https = require("https");
 
