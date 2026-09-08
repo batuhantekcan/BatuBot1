@@ -27,3 +27,4 @@ jobs:
         env:
           BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
           OAUTH_TOKEN: ${{ secrets.OAUTH_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
